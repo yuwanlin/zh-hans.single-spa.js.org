@@ -17,7 +17,7 @@ single-spa 应用与普通的单页面是一样的，只不过它没有HTML页�
 
 注:
 - `bootstrap`, `mount`, and `unmount`的实现是必须的，`unload`则是可选的
-- 生命周期函数必须有返回值，可以是Promise或者```async```函数
+- 生命周期函数要么返回Promise，要么其本身是```async```函数
 - 如果导出的是函数数组而不是单个函数，这些函数会被依次调用，对于promise函数，会等到resolve之后再调用下一个函数
 - 如果 single-spa [未启动](api.md#start)，各个应用会被下载，但不会被初始化、挂载或卸载。
 
